@@ -22,7 +22,7 @@ export default function RootLayout({
         className={`${inter.className} grid grid-rows-rootLayout min-h-screen`}
       >
         <Header />
-        <main className="mx-8">{children}</main>
+        <main>{children}</main>
         <Footer />
       </body>
     </html>

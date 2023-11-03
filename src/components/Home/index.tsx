@@ -2,6 +2,7 @@
 import { MouseEventHandler, useEffect, useState } from "react";
 import Button from "../Button";
 import { animate, motion } from "framer-motion";
+import Link from "next/link";
 
 export default function Home() {
   const messages = [
@@ -11,13 +12,15 @@ export default function Home() {
   const [text, setText] = useState<String>(messages[0]);
   const [count, setCount] = useState(0);
 
-  const onClick: MouseEventHandler = () => {
-    setText(messages[count]);
+  setInterval(() => {
     setCount(count == messages.length - 1 ? 0 : count + 1);
-  };
+    setText(messages[count]);
+  }, 2000);
+
+  const onClick: MouseEventHandler = () => {};
 
   return (
-    <div className="flex flex-col gap-2 items-center justify-center h-full">
+    <div className="flex flex-col gap-2 items-center justify-center h-full bg-gradient-to-bl from-[#001E71] to-[#36FB7B]">
       <motion.div
         key={text.toString()}
         initial="hide"
@@ -28,7 +31,7 @@ export default function Home() {
             y: 0,
             transition: {
               ease: "easeInOut",
-              duration: 0.3,
+              duration: 0.5,
             },
           },
           hide: {
@@ -37,13 +40,13 @@ export default function Home() {
           },
         }}
       >
-        <h1>{text}</h1>
+        <h1 className="text-3xl">{text}</h1>
       </motion.div>
-      <Button
-        className="py-3 px-7 bg-slate-600 rounded hover:bg-white hover:text-black transition-colors duration-300"
-        text="Click me"
-        onClick={onClick}
-      />
+      <div className="flex flex-row gap-2">
+        <Link className="btn-primary" href="/teste" prefetch={true}>
+          Navegar
+        </Link>
+      </div>
     </div>
   );
 }

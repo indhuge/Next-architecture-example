@@ -8,6 +8,14 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        simple: "url(../../public/back.jpg)",
+      },
+      colors: {
+        "blue-primary": "#002747",
+        ascent: "#00D272",
+        "blue-sec": "#003872",
+      },
       gridTemplateRows: {
         rootLayout: "auto 1fr auto",
       },

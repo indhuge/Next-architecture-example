@@ -7,7 +7,7 @@ export default function Button({
 }: {
   className?: string;
   text: string;
-  onClick: MouseEventHandler<HTMLButtonElement>;
+  onClick?: MouseEventHandler<HTMLButtonElement>;
 }) {
   return (
     <button className={className} onClick={onClick}>

@@ -1,11 +1,5 @@
-"use client";
+import About from "@/components/About";
 
 export default function TestePage() {
-  return (
-    <div>
-      <h1>Teste</h1>
-      <p>alçskdçalksd</p>
-      <h2>lajksdhlajkdh</h2>
-    </div>
-  );
+  return <About />;
 }
