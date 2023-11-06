@@ -6,6 +6,12 @@
   h1 {
     @apply text-4xl font-light my-5;
   }
+  h2 {
+    @apply text-2xl font-light my-5;
+  }
+  input {
+    @apply text-black py-3 px-7 rounded;
+  }
   .btn-primary {
     @apply py-3 px-7 bg-blue-sec hover:bg-ascent hover:text-black rounded transition-all duration-300;
   }
