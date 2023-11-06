@@ -7,7 +7,7 @@ import {
 } from "react";
 import Button from "../Button";
 import { RequestAreaValue } from "./actions";
-import { CircleAreaResult } from "@/app/api/circle-area/route";
+import { CircleAreaPOSTResult } from "@/app/api/circle-area/route";
 
 export default function Circle() {
   const [radius, setRadius] = useState(0);
