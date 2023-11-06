@@ -6,7 +6,7 @@ import {
   useState,
 } from "react";
 import Button from "../Button";
-import { RequestAreaValue } from "./actions";
+import { RequestAreaValue } from "./service";
 import { CircleAreaPOSTResult } from "@/app/api/circle-area/route";
 
 export default function Circle() {
